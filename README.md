@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @LaloBaronetto
-- 👀 Estoy interesado en imgenieria industrial, Ing de datos, python para principiantes,etc.
+- 👀 Estoy interesado en ingenieria industrial, Ing de datos, python para principiantes,etc.
 
 <!---
 LaloBaronetto/LaloBaronetto is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
