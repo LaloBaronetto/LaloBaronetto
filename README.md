@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @LaloBaronetto
+- 👋 Hola, soy @LaloBaronetto
 - 👀 Estoy interesado en ingenieria industrial, Ing de datos, python para principiantes,etc.
 
 <!---
