@@ -1,5 +1,5 @@
 - 👋 Hola, soy @LaloBaronetto
-- 👀 Estoy interesado en ingenieria industrial, Ing de datos, python para principiantes,etc.
+- 👀 Estoy interesado en datos e Ingeniería de procesos. Básicamente optimizacion de cualquier servicio o producto.
 
 <!---
 LaloBaronetto/LaloBaronetto is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
