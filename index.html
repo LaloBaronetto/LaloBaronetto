@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PRODUCTO ROBERTO | Ingeniería, Tecnología y Mejora Continua</title>
+
+<meta name="description" content="Roberto Baronetto. Ingeniero Industrial especializado en optimización de procesos, automatización con Python, análisis de datos, digitalización comercial y mejora continua para empresas y PyMEs.">
+<meta name="keywords" content="Ingeniería Industrial, Automatización Python, Mejora Continua, Consultoría Industrial, Digitalización, Catálogos Web, Análisis de Datos, Tucumán">
+<meta name="author" content="Roberto Baronetto">
+<meta name="theme-color" content="#171310">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="PRODUCTO ROBERTO | Soluciones que generan valor">
+<meta property="og:description" content="Transformo problemas operativos y comerciales en soluciones prácticas, tecnológicas y medibles.">
+<meta property="og:image" content="assets/roberto-baronetto.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #171310;
+    --bg2: #211914;
+    --surface: #292019;
+    --surface2: #33251d;
+    --copper: #b77945;
+    --gold: #d7a16d;
+    --beige: #d7b995;
+    --ivory: #f3ede4;
+    --muted: #b9aa9b;
+    --border: rgba(215,185,149,.18);
+    --success: #83b89a;
+    --shadow: 0 20px 60px rgba(0,0,0,.25);
+    --radius: 18px;
+    --max: 1160px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ivory);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(92%, var(--max));
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.section-label::before {
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: var(--copper);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 18px;
+}
+
+.section-description {
+    max-width: 690px;
+    color: var(--muted);
+    margin-bottom: 45px;
+}
+
+.accent {
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 23px;
+    border-radius: 8px;
+    border: 1px solid var(--copper);
+    font-weight: 700;
+    transition: .25s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--copper);
+    color: #171310;
+}
+
+.btn-primary:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    color: var(--ivory);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(183,121,69,.13);
+    transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+    background: #267a52;
+    color: white;
+    border-color: #267a52;
+}
+
+.btn-whatsapp:hover {
+    background: #329766;
+}
+
+/* NAVIGATION */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(23,19,16,.93);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: .86rem;
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    color: var(--ivory);
+    border: 0;
+    font-size: 1.8rem;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 130px 0 80px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 85% 30%, rgba(183,121,69,.16), transparent 45%),
+        linear-gradient(130deg, #171310 45%, #302119);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-kicker {
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: .78rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    margin-bottom: 25px;
+    max-width: 750px;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 38px;
+}
+
+.hero-tags span {
+    font-size: .75rem;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--beige);
+}
+
+.hero-photo {
+    position: relative;
+    max-width: 430px;
+    margin: auto;
+}
+
+.hero-photo::before {
+    content: "";
+    position: absolute;
+    inset: -14px 14px 14px -14px;
+    border: 1px solid var(--copper);
+    border-radius: 180px 180px 16px 16px;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center 28%;
+    border-radius: 180px 180px 16px 16px;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 20px;
+    left: -35px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.photo-caption strong {
+    display: block;
+    color: var(--gold);
+}
+
+.photo-caption small {
+    color: var(--muted);
+}
+
+/* TRUST STRIP */
+
+.trust-strip {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 27px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.trust-item strong {
+    color: var(--gold);
+    display: block;
+    font-size: 1.1rem;
+}
+
+.trust-item span {
+    font-size: .78rem;
+    color: var(--muted);
+}
+
+/* SERVICES */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: linear-gradient(145deg, var(--surface), #211914);
+    padding: 29px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--copper);
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    color: var(--beige);
+}
+
+.service-card p {
+    font-size: .9rem;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.service-card ul {
+    list-style: none;
+    color: var(--muted);
+    font-size: .84rem;
+}
+
+.service-card li {
+    margin: 7px 0;
+}
+
+.service-card li::before {
+    content: "✓";
+    color: var(--gold);
+    margin-right: 9px;
+}
+
+/* MARKETS */
+
+.markets {
+    background: var(--surface);
+}
+
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.market-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: end;
+}
+
+.market-industrial {
+    background:
+        linear-gradient(0deg, rgba(23,19,16,.98), rgba(23,19,16,.25)),
+        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.market-business {
+    background:
+        linear-gradient(0deg, rgba(23,19,16,.98), rgba(23,19,16,.25)),
+        url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.market-content {
+    padding: 35px;
+}
+
+.market-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+}
+
+.market-content p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.market-content ul {
+    list-style: none;
+    color: var(--beige);
+    font-size: .88rem;
+}
+
+.market-content li {
+    margin: 8px 0;
+}
+
+/* METHODOLOGY */
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+}
+
+.method-step {
+    padding: 25px 17px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.method-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: var(--copper);
+}
+
+.method-step h3 {
+    font-size: .95rem;
+    margin: 12px 0;
+}
+
+.method-step p {
+    color: var(--muted);
+    font-size: .8rem;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-highlight {
+    background: linear-gradient(140deg, var(--surface2), var(--surface));
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.about-highlight h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.about-highlight p {
+    color: var(--muted);
+}
+
+.about-text p {
+    color: var(--muted);
+    margin-bottom: 17px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.skills span {
+    padding: 8px 13px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--beige);
+    font-size: .78rem;
+    border-radius: 30px;
+}
+
+/* PROJECTS */
+
+.projects {
+    background: var(--surface);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg2);
+}
+
+.project-image {
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-cappetta {
+    background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80');
+}
+
+.project-delivery {
+    background-image: url('https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=1000&q=80');
+}
+
+.project-content {
+    padding: 27px;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    color: var(--beige);
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    color: var(--muted);
+    font-size: .88rem;
+    margin-bottom: 18px;
+}
+
+.project-type {
+    color: var(--gold);
+    font-size: .73rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.project-link {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: .87rem;
+}
+
+/* CONSULTATION MATRIX */
+
+.consultation {
+    background:
+        radial-gradient(ellipse at 90% 10%, rgba(183,121,69,.12), transparent 50%),
+        var(--bg);
+}
+
+.consultation-wrapper {
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.consultation-info {
+    position: sticky;
+    top: 110px;
+}
+
+.consultation-info p {
+    color: var(--muted);
+    margin: 18px 0;
+}
+
+.consultation-info ul {
+    list-style: none;
+    color: var(--beige);
+    font-size: .88rem;
+}
+
+.consultation-info li {
+    margin: 12px 0;
+}
+
+.consultation-info li::before {
+    content: "✓";
+    color: var(--gold);
+    margin-right: 10px;
+}
+
+.form-card {
+    background: var(--surface);
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 7px;
+}
+
+.form-subtitle {
+    color: var(--muted);
+    font-size: .85rem;
+    margin-bottom: 28px;
+}
+
+.form-step {
+    margin-bottom: 23px;
+}
+
+.form-step label,
+.form-label {
+    display: block;
+    font-size: .88rem;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.form-step label span {
+    color: var(--gold);
+}
+
+.form-control {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--ivory);
+    background: #211914;
+    outline: none;
+    transition: .2s;
+}
+
+.form-control:focus {
+    border-color: var(--gold);
+}
+
+.form-control::placeholder {
+    color: #938477;
+}
+
+select.form-control option {
+    background: #211914;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.radio-option {
+    position: relative;
+}
+
+.radio-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-option label {
+    display: block;
+    padding: 13px;
+    background: #211914;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: .83rem;
+    transition: .2s;
+}
+
+.radio-option input:checked + label {
+    border-color: var(--gold);
+    background: rgba(183,121,69,.15);
+    color: var(--gold);
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: .76rem;
+    margin: 12px 0;
+}
+
+.form-card .btn {
+    width: 100%;
+}
+
+.privacy-note {
+    font-size: .73rem;
+    color: var(--muted);
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* FAQ */
+
+.faq-list {
+    max-width: 850px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    color: var(--ivory);
+    width: 100%;
+    text-align: left;
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-weight: 700;
+}
+
+.faq-answer {
+    display: none;
+    color: var(--muted);
+    padding: 0 0 22px;
+    font-size: .9rem;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question span {
+    color: var(--gold);
+}
+
+/* CTA */
+
+.final-cta {
+    padding: 90px 0;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, rgba(183,121,69,.18), transparent 70%),
+        var(--surface);
+    border-top: 1px solid var(--border);
+}
+
+.final-cta h2 {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.final-cta p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 55px 0 25px;
+    background: #100d0b;
+    border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.footer-grid h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.footer-grid p,
+.footer-grid a {
+    color: var(--muted);
+    font-size: .84rem;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.footer-grid a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--muted);
+    font-size: .75rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 900;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,.4);
+    transition: .2s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.back-top {
+    position: fixed;
+    bottom: 95px;
+    right: 34px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--gold);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+}
+
+.back-top.visible {
+    display: flex;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width:900px) {
+    .hero-grid,
+    .about-grid,
+    .consultation-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+        gap: 50px;
+    }
+
+    .hero-photo {
+        max-width: 370px;
+    }
+
+    .hero-photo img {
+        height: 460px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .method-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .consultation-info {
+        position: static;
+    }
+}
+
+@media(max-width:650px) {
+    .section {
+        padding: 75px 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: #171310;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5%;
+        display: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 13px 0;
+    }
+
+    .navbar > .btn {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-photo img {
+        height: 420px;
+    }
+
+    .photo-caption {
+        left: 0;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .services-grid,
+    .market-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .method-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .radio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-card {
+        padding: 23px 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="#inicio" class="logo">
+            PRODUCTO <span>ROBERTO.</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#mercados">Soluciones</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#perfil">Sobre mí</a></li>
+                <li><a href="#consulta">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="#consulta" class="btn btn-primary">Hablemos de tu proyecto</a>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-kicker">
+                INGENIERÍA · TECNOLOGÍA · RESULTADOS
+            </div>
+
+            <h1>
+                Transformo problemas en
+                <span class="accent">soluciones que generan valor.</span>
+            </h1>
+
+            <p class="hero-description">
+                Soy Roberto Baronetto, Ingeniero Industrial. Ayudo a empresas,
+                industrias y PyMEs a optimizar procesos, automatizar tareas,
+                organizar información y desarrollar herramientas digitales
+                que mejoran su funcionamiento y facilitan sus decisiones.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#consulta" class="btn btn-primary">
+                    Quiero mejorar mi negocio →
+                </a>
+
+                <a href="#proyectos" class="btn btn-outline">
+                    Conocer mis proyectos
+                </a>
+            </div>
+
+            <div class="hero-tags">
+                <span>Ingeniería Industrial</span>
+                <span>Python y SQL</span>
+                <span>Automatización</span>
+                <span>Mejora Continua</span>
+                <span>Tucumán y NOA</span>
+            </div>
+
+        </div>
+
+        <div class="hero-photo">
+            <img
+                src="assets/roberto-baronetto.png"
+                alt="Roberto Baronetto, Ingeniero Industrial"
+                fetchpriority="high"
+            >
+
+            <div class="photo-caption">
+                <strong>Roberto Baronetto</strong>
+                <small>Ingeniería aplicada a problemas reales.</small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONFIANZA -->
+
+<section class="trust-strip">
+    <div class="container trust-grid">
+        <div class="trust-item">
+            <strong>+8 años</strong>
+            <span>Experiencia profesional declarada</span>
+        </div>
+        <div class="trust-item">
+            <strong>Industria + PyMEs</strong>
+            <span>Visión operativa y comercial</span>
+        </div>
+        <div class="trust-item">
+            <strong>Soluciones a medida</strong>
+            <span>Tecnología adaptada al negocio</span>
+        </div>
+        <div class="trust-item">
+            <strong>Tucumán y NOA</strong>
+            <span>Alcance comercial local</span>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+
+<section class="section" id="servicios">
+    <div class="container">
+
+        <div class="section-label">Qué puedo hacer por tu negocio</div>
+
+        <h2>
+            Soluciones prácticas para
+            <span class="accent">problemas reales.</span>
+        </h2>
+
+        <p class="section-description">
+            No se trata de incorporar tecnología porque sí.
+            Se trata de identificar qué necesita mejorar tu organización
+            y desarrollar una solución que tenga sentido económico y operativo.
+        </p>
+
+        <div class="services-grid">
+
+            <article class="service-card reveal">
+                <div class="service-icon">⚙️</div>
+                <h3>Ingeniería y optimización de procesos</h3>
+                <p>
+                    Analizo operaciones para identificar ineficiencias,
+                    restricciones, desperdicios y oportunidades de mejora.
+                </p>
+                <ul>
+                    <li>Diagnóstico operativo.</li>
+                    <li>Mejora continua.</li>
+                    <li>Análisis de procesos.</li>
+                    <li>Indicadores de productividad.</li>
+                    <li>Reducción de costos ocultos.</li>
+                </ul>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon">💻</div>
+                <h3>Automatización con Python</h3>
+                <p>
+                    Desarrollo herramientas para reducir tareas manuales,
+                    integrar información y simplificar operaciones.
+                </p>
+                <ul>
+                    <li>Procesamiento masivo de datos.</li>
+                    <li>Automatización de Excel.</li>
+                    <li>Integración de APIs.</li>
+                    <li>Scripts en Python.</li>
+                    <li>Google Colab y VS Code.</li>
+                </ul>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon">📊</div>
+                <h3>Gestión y análisis de datos</h3>
+                <p>
+                    Transformo información dispersa en bases organizadas
+                    y herramientas útiles para decidir.
+                </p>
+                <ul>
+                    <li>Diseño de bases de datos.</li>
+                    <li>SQL y SQLite.</li>
+                    <li>Depuración de información.</li>
+                    <li>Consultas inteligentes.</li>
+                    <li>Reportes e indicadores.</li>
+                </ul>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon">🌐</div>
+                <h3>Digitalización comercial</h3>
+                <p>
+                    Desarrollo plataformas web sencillas para organizar
+                    productos, facilitar consultas y generar oportunidades.
+                </p>
+                <ul>
+                    <li>Catálogos web interactivos.</li>
+                    <li>Integración con WhatsApp.</li>
+                    <li>Formularios de pedidos.</li>
+                    <li>Experiencias móviles.</li>
+                    <li>Publicación web.</li>
+                </ul>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon">🔍</div>
+                <h3>Investigación y consultas técnicas</h3>
+                <p>
+                    Relevo, organizo y contrasto información para
+                    desarrollar soluciones fundamentadas.
+                </p>
+                <ul>
+                    <li>Investigación documental y web.</li>
+                    <li>Consulta de fuentes técnicas.</li>
+                    <li>Integración de información.</li>
+                    <li>Validación de datos.</li>
+                    <li>Documentación de resultados.</li>
+                </ul>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon">🚀</div>
+                <h3>Desarrollo y gestión de proyectos</h3>
+                <p>
+                    Acompaño la transformación de una necesidad
+                    en un proyecto estructurado y ejecutable.
+                </p>
+                <ul>
+                    <li>Evaluación de prefactibilidad.</li>
+                    <li>Análisis costo-beneficio.</li>
+                    <li>Planificación de proyectos.</li>
+                    <li>Evaluación de alternativas.</li>
+                    <li>Seguimiento y mejora.</li>
+                </ul>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- MERCADOS -->
+
+<section class="section markets" id="mercados">
+    <div class="container">
+
+        <div class="section-label">A quién ayudo</div>
+
+        <h2>
+            Dos mercados. Un mismo objetivo:
+            <span class="accent">generar valor.</span>
+        </h2>
+
+        <p class="section-description">
+            Cada organización tiene problemas diferentes.
+            Por eso adapto el enfoque, el alcance y la tecnología
+            a las necesidades de cada cliente.
+        </p>
+
+        <div class="market-grid">
+
+            <article class="market-card market-industrial">
+                <div class="market-content">
+                    <div class="section-label">Mercado industrial</div>
+                    <h3>Empresas y operaciones productivas</h3>
+                    <p>
+                        Ayudo a mejorar procesos, gestionar recursos,
+                        analizar información y encontrar oportunidades
+                        de eficiencia en operaciones industriales.
+                    </p>
+                    <ul>
+                        <li>Gerencias de operaciones.</li>
+                        <li>Producción y mantenimiento.</li>
+                        <li>Industria agroindustrial.</li>
+                        <li>Empresas medianas y grandes.</li>
+                        <li>Operaciones del NOA.</li>
+                    </ul>
+                    <br>
+                    <a href="#consulta" class="btn btn-primary">
+                        Consultar por una mejora →
+                    </a>
+                </div>
+            </article>
+
+            <article class="market-card market-business">
+                <div class="market-content">
+                    <div class="section-label">Mercado comercial</div>
+                    <h3>PyMEs, comercios y distribuidores</h3>
+                    <p>
+                        Desarrollo soluciones digitales y automatizaciones
+                        que permiten ahorrar tiempo, organizar productos
+                        y simplificar las ventas.
+                    </p>
+                    <ul>
+                        <li>Distribuidores y mayoristas.</li>
+                        <li>Comercios y empresas familiares.</li>
+                        <li>Lubricentros y negocios técnicos.</li>
+                        <li>Emprendimientos.</li>
+                        <li>Negocios que necesitan digitalizarse.</li>
+                    </ul>
+                    <br>
+                    <a href="#consulta" class="btn btn-primary">
+                        Digitalizar mi negocio →
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- METODOLOGÍA -->
+
+<section class="section" id="metodologia">
+    <div class="container">
+
+        <div class="section-label">Cómo trabajo</div>
+
+        <h2>
+            Metodología orientada a
+            <span class="accent">resultados.</span>
+        </h2>
+
+        <p class="section-description">
+            Aplico criterios de ingeniería, análisis de datos y mejora continua.
+            Cada proyecto comienza entendiendo el problema y termina
+            evaluando si la solución realmente aporta valor.
+        </p>
+
+        <div class="method-grid">
+
+            <article class="method-step reveal">
+                <div class="method-number">01</div>
+                <h3>Diagnóstico</h3>
+                <p>
+                    Relevar la situación actual, necesidades,
+                    restricciones y objetivos.
+                </p>
+            </article>
+
+            <article class="method-step reveal">
+                <div class="method-number">02</div>
+                <h3>Análisis</h3>
+                <p>
+                    Identificar causas, oportunidades,
+                    datos disponibles y alternativas.
+                </p>
+            </article>
+
+            <article class="method-step reveal">
+                <div class="method-number">03</div>
+                <h3>Diseño</h3>
+                <p>
+                    Definir una solución técnica,
+                    alcance, recursos y presupuesto.
+                </p>
+            </article>
+
+            <article class="method-step reveal">
+                <div class="method-number">04</div>
+                <h3>Ejecución</h3>
+                <p>
+                    Desarrollar, programar, implementar
+                    o documentar la solución acordada.
+                </p>
+            </article>
+
+            <article class="method-step reveal">
+                <div class="method-number">05</div>
+                <h3>Validación</h3>
+                <p>
+                    Medir impacto, verificar resultados
+                    y asegurar autonomía del cliente.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE MÍ -->
+
+<section class="section" id="perfil">
+    <div class="container about-grid">
+
+        <div class="about-highlight reveal">
+            <h3>Ingeniería + Tecnología</h3>
+            <p>
+                "Creo firmemente que la mejor solución no es la más compleja,
+                sino la que resuelve el problema de forma eficiente, práctica
+                y sostenible en el tiempo."
+            </p>
+            <br>
+            <p>
+                <strong>Roberto Gerardo Baronetto</strong><br>
+                <span class="accent">Ingeniero Industrial & Especialista en Datos</span>
+            </p>
+        </div>
+
+        <div class="about-text reveal">
+            <div class="section-label">Sobre mí</div>
+            <h2>Formación rigurosa con enfoque práctico.</h2>
+            <p>
+                Soy Ingeniero Industrial recibido en la Universidad del Norte Santo Tomás de Aquino (UNSTA) y Técnico Químico Agroindustrial por la Escuela de Agricultura y Sacarotecnia (UNT).
+            </p>
+            <p>
+                Cuento con posgrado en Gestión de Proyectos e Ingeniería de Datos (SQL y ETL) por la UTN FRBA, además de experiencia directiva liderando operaciones industriales complejas de alta exigencia.
+            </p>
+            <p>
+                Combino la visión sistémica de la ingeniería con habilidades avanzadas de programación en Python, diseño web y automatización para ofrecer soluciones reales a empresas y comercios.
+            </p>
+
+            <div class="skills">
+                <span>Ingeniería Industrial</span>
+                <span>Python & SQL</span>
+                <span>Google Colab</span>
+                <span>VS Code</span>
+                <span>Catálogos Web</span>
+                <span>Gestión de Proyectos</span>
+                <span>Mejora Continua</span>
+                <span>Tucumán, Argentina</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROYECTOS -->
+
+<section class="section projects" id="proyectos">
+    <div class="container">
+
+        <div class="section-label">Casos de éxito y prototipos</div>
+
+        <h2>
+            Proyectos reales en
+            <span class="accent">producción.</span>
+        </h2>
+
+        <p class="section-description">
+            Ejemplos concretos de plataformas web y sistemas desarrollados
+            para optimizar ventas y agilizar operaciones en la región.
+        </p>
+
+        <div class="projects-grid">
+
+            <article class="project-card reveal">
+                <div class="project-image project-cappetta"></div>
+                <div class="project-content">
+                    <div class="project-type">Catálogo Mayorista / Distribución</div>
+                    <h3>Catálogo Cappetta</h3>
+                    <p>
+                        Plataforma digital para distribución de lubricantes y filtros. Permite navegar stock, armar pedidos y enviarlos directamente a WhatsApp de forma ordenada.
+                    </p>
+                    <a href="https://lalobaronetto.github.io/catalogo-cappetta/" target="_blank" class="project-link">
+                        Visitar catálogo en vivo →
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image project-delivery"></div>
+                <div class="project-content">
+                    <div class="project-type">Sistema de Pedidos / Gastronomía</div>
+                    <h3>Delivery Los Amigos</h3>
+                    <p>
+                        Interfaz web ultrarrápida optimizada para dispositivos móviles, diseñada para agilizar la toma de pedidos gastronómicos sin comisiones de terceros.
+                    </p>
+                    <a href="https://lalobaronetto.github.io/Delivery-los-Amigos/" target="_blank" class="project-link">
+                        Visitar sistema en vivo →
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONSULTATION MATRIX -->
+
+<section class="section consultation" id="consulta">
+    <div class="container consultation-wrapper">
+
+        <div class="consultation-info reveal">
+            <div class="section-label">Matriz de diagnóstico</div>
+            <h2>Cuéntame tu desafío.</h2>
+            <p>
+                Completa este formulario guiado. El sistema generará automáticamente un resumen estructurado con tu diagnóstico para iniciar una conversación directa por WhatsApp.
+            </p>
+            <ul>
+                <li>Respuesta rápida y directa.</li>
+                <li>Análisis preliminar sin compromiso.</li>
+                <li>Enfoque técnico y comercial claro.</li>
+            </ul>
+        </div>
+
+        <div class="form-card reveal">
+            <h3>Iniciá tu consulta técnica</h3>
+            <p class="form-subtitle">Seleccioná las opciones que mejor describen tu situación actual.</p>
+
+            <form id="matrixForm" onsubmit="event.preventDefault(); sendWhatsApp();">
+
+                <div class="form-step">
+                    <label>1. ¿Cómo te llamás o cuál es tu empresa? <span>*</span></label>
+                    <input type="text" id="clientName" class="form-control" placeholder="Ej: Juan Pérez / Distribuidora del Norte" required oninput="updatePreview()">
+                </div>
+
+                <div class="form-step">
+                    <label>2. ¿A qué sector pertenece tu actividad? <span>*</span></label>
+                    <input type="text" id="companyType" class="form-control" placeholder="Ej: Industria, Lubricentro, Gastronomía, Comercio" required oninput="updatePreview()">
+                </div>
+
+                <div class="form-step">
+                    <label>3. ¿Qué solución te interesa explorar? <span>*</span></label>
+                    <select id="serviceType" class="form-control" onchange="updatePreview()">
+                        <option value="Catálogo Web / Digitalización Comercial">Catálogo Web / Digitalización Comercial</option>
+                        <option value="Automatización con Python / Datos">Automatización con Python / Datos</option>
+                        <option value="Ingeniería y Optimización de Procesos">Ingeniería y Optimización de Procesos</option>
+                        <option value="Gestión de Proyectos o Consultoría">Gestión de Proyectos o Consultoría</option>
+                    </select>
+                </div>
+
+                <div class="form-step">
+                    <label>4. ¿Cuál es el principal problema u oportunidad? <span>*</span></label>
+                    <textarea id="currentProblem" class="form-control" placeholder="Ej: Perdemos tiempo cargando datos a mano / Necesitamos ordenar un catálogo online para clientes." required oninput="updatePreview()"></textarea>
+                </div>
+
+                <div class="form-step">
+                    <label>5. ¿Qué resultado principal esperás lograr?</label>
+                    <input type="text" id="expectedOutcome" class="form-control" placeholder="Ej: Ahorrar horas de trabajo / Recibir pedidos cerrados por WhatsApp" oninput="updatePreview()">
+                </div>
+
+                <div class="form-note">
+                    Al enviar, se abrirá WhatsApp con tu mensaje formateado y listo para enviar directamente a Roberto Baronetto.
+                </div>
+
+                <div class="preview-box" style="background:#171310; border:1px solid var(--border); padding:15px; border-radius:8px; margin-bottom:20px;">
+                    <small style="color: var(--gold); display:block; margin-bottom:6px; font-weight:700;">PREVISUALIZACIÓN DEL MENSAJE:</small>
+                    <div id="previewText" style="font-family:monospace; font-size:0.82rem; color:var(--muted); white-space:pre-wrap;"></div>
+                </div>
+
+                <button type="submit" class="btn btn-whatsapp">
+                    📲 Enviar Consulta por WhatsApp
+                </button>
+
+                <div class="privacy-note">
+                    Tus datos se utilizan exclusivamente para estructurar la consulta técnica inicial.
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+
+<section class="section">
+    <div class="container">
+        <div class="section-label">Preguntas frecuentes</div>
+        <h2>Dudas comunes sobre <span class="accent">los servicios.</span></h2>
+        <p class="section-description">Respuestas claras sobre tiempos, modalidades y alcance de trabajo.</p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Dónde estás ubicado y trabajas de forma remota?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Estoy radicado en San Miguel de Tucumán, Argentina. Trabajo con proyectos presenciales en la región del NOA y de manera remota para toda la Argentina y el exterior.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cuánto demora el desarrollo de un catálogo web o automatización?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Los catálogos web interactivos suelen estar listos y funcionando en producción entre 48 y 72 horas una vez provista la información. Los scripts de automatización o proyectos de ingeniería varían según la complejidad del diagnóstico inicial.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué necesito para empezar a trabajar en un proyecto?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Solo necesitas completar la matriz de diagnóstico o escribirme por WhatsApp detallando cuál es tu principal cuello de botella. Con eso coordinamos una charla técnica inicial sin cargo.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+
+<section class="final-cta">
+    <div class="container">
+        <div class="section-label">Dá el primer paso</div>
+        <h2>¿Listo para optimizar tus procesos y potenciar tus ventas?</h2>
+        <p>Hablemos hoy mismo sobre tu proyecto y encontremos la solución técnica adecuada.</p>
+        <a href="https://wa.me/543815600151?text=Hola%20Roberto,%20estuve%20viendo%20tu%20web%20y%20quiero%20consultarte%20por%20un%20proyecto." target="_blank" class="btn btn-whatsapp" style="font-size:1.1rem; padding: 16px 32px;">
+            💬 Chatear con Roberto en WhatsApp
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>PRODUCTO ROBERTO</h3>
+            <p>Ingeniería Industrial, automatización de datos y digitalización comercial para transformar operaciones en resultados medibles.</p>
+            <p style="margin-top:15px; color: var(--gold);">San Miguel de Tucumán, Argentina.</p>
+        </div>
+
+        <div>
+            <h3>Enlaces Rápidos</h3>
+            <a href="#servicios">Servicios</a>
+            <a href="#mercados">Soluciones Industriales y PyME</a>
+            <a href="#metodologia">Metodología</a>
+            <a href="#proyectos">Proyectos Activos</a>
+            <a href="#perfil">Sobre Mí</a>
+        </div>
+
+        <div>
+            <h3>Contacto Directo</h3>
+            <p>📱 WhatsApp: +54 381 560-0151</p>
+            <p>📧 Email: robertobaronetto@gmail.com</p>
+            <div class="social-links" style="margin-top: 15px;">
+                <a href="https://www.linkedin.com/in/rbaronetto/" target="_blank" class="btn btn-outline" style="padding: 8px 14px; font-size: .8rem;">LinkedIn</a>
+                <a href="https://www.instagram.com/lalobaronetto/" target="_blank" class="btn btn-outline" style="padding: 8px 14px; font-size: .8rem;">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 Roberto Gerardo Baronetto. Todos los derechos reservados.</p>
+        <p>Ingeniería y Tecnología Aplicada.</p>
+    </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+
+<a href="https://wa.me/543815600151?text=Hola%20Roberto,%20quiero%20consultarte%20por%20un%20proyecto." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    💬
+</a>
+
+<a href="#inicio" class="back-top" id="backTop" aria-label="Volver arriba">
+    ↑
+</a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+// Menu Mobile Toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !expanded);
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+    });
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!wasActive) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// Scroll Reveal Observer
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+revealElements.forEach(el => observer.observe(el));
+
+// Back to Top & Sticky Header effects
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+        backTop.classList.add('visible');
+    } else {
+        backTop.classList.remove('visible');
+    }
+});
+
+// WhatsApp Matrix Consultation Generator
+function updatePreview() {
+    const name = document.getElementById('clientName').value || '[Nombre o Empresa]';
+    const company = document.getElementById('companyType').value || '[Sector / Actividad]';
+    const service = document.getElementById('serviceType').value;
+    const problem = document.getElementById('currentProblem').value || '[Descripción del problema u oportunidad]';
+    const outcome = document.getElementById('expectedOutcome').value || '[Resultado esperado]';
+
+    const message = `📋 *CONSULTA TÉCNICA - PRODUCTO ROBERTO*\n` +
+        `----------------------------------------\n` +
+        `👤 *Cliente:* ${name}\n` +
+        `🏢 *Sector:* ${company}\n` +
+        `🛠️ *Servicio de Interés:* ${service}\n` +
+        `⚠️ *Problema / Oportunidad:* ${problem}\n` +
+        `🎯 *Resultado Esperado:* ${outcome}\n` +
+        `----------------------------------------\n` +
+        `Hola Roberto, completé el formulario en tu web y quiero avanzar con una consulta técnica.`;
+
+    document.getElementById('previewText').textContent = message;
+    return message;
+}
+
+function sendWhatsApp() {
+    const rawMessage = updatePreview();
+    const encodedMessage = encodeURIComponent(rawMessage);
+    const whatsappUrl = `https://wa.me/543815600151?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+window.onload = updatePreview;
+</script>
+
+</body>
+</html>
